@@ -37,34 +37,41 @@ const DATA = {
     {
       "sem": 3,
       "fecha": "jue 2 jul",
-      "chile": "Bracket Principal R1",
-      "peru": "Bracket Principal R1",
+      "chile": "Principal R1 · Copa A y Copa B",
+      "peru": "Principal R1 · Copa F y Copa G",
       "estado": "actual"
     },
     {
       "sem": 4,
       "fecha": "jue 9 jul",
-      "chile": "Principal R2 + Repechaje R1",
-      "peru": "Final Principal + Repechaje R1",
+      "chile": "Principal R1 · Copa C y Copa D",
+      "peru": "Final Principal (según resultados de R1)",
       "estado": "pendiente"
     },
     {
       "sem": 5,
       "fecha": "jue 16 jul",
-      "chile": "Final Principal + Repechaje R2",
-      "peru": "Repechaje Final + Final Nacional 🏆",
+      "chile": "Principal R1 · Copa E (último grupo)",
+      "peru": "Repechaje Final + Final Nacional 🏆 (según resultados)",
       "estado": "pendiente"
     },
     {
       "sem": 6,
       "fecha": "jue 23 jul",
-      "chile": "Final Nacional 🏆",
+      "chile": "Principal R2 (arranca con los resultados de R1)",
       "peru": "— (campeón a la espera)",
       "estado": "pendiente"
     },
     {
       "sem": 7,
-      "fecha": "jue 30 jul",
+      "fecha": "por confirmar",
+      "chile": "Resto del bracket (Repechaje, Final Principal, Final Nacional 🏆)",
+      "peru": "—",
+      "estado": "pendiente"
+    },
+    {
+      "sem": 8,
+      "fecha": "por confirmar",
       "chile": "🌎 Gran Final Internacional",
       "peru": "🌎 Gran Final Internacional",
       "estado": "pendiente"
@@ -407,6 +414,100 @@ const DATA = {
       "tiempoFmt": null
     }
   ],
+  "proximaRonda": {
+    "nombre": "Principal R1",
+    "fecha": "jue 2 · jue 9 · jue 16 jul",
+    "copaJuego": {
+      "nombre": "Copa Caparazón (Shell Cup)",
+      "pistas": ["Koopa Troopa Beach", "Faraway Oasis", "Crown City", "Peach Stadium"],
+      "porque": "Dificultad intermedia: ni la primera copa (muy fácil) ni la Especial (la más difícil, reservada para la Final Nacional / Gran Final)."
+    },
+    "notas": [
+      "Solo se juega los jueves, máximo 2 copas por jueves.",
+      "Chile: jue 2 (Copa A y B) · jue 9 (Copa C y D) · jue 16 (Copa E).",
+      "Perú: jue 2 (Copa F y G). Serch pasa directo a la Final Principal — pendiente confirmar."
+    ],
+    "chile": [
+      {
+        "copa": "Copa A",
+        "fecha": "jue 2 jul",
+        "jugadores": [
+          { "seed": 1, "gamertag": "Maurinho" },
+          { "seed": 10, "gamertag": "dvnil0" },
+          { "seed": 11, "gamertag": "diegonitro" },
+          { "seed": 20, "gamertag": "the boss" }
+        ]
+      },
+      {
+        "copa": "Copa B",
+        "fecha": "jue 2 jul",
+        "jugadores": [
+          { "seed": 2, "gamertag": "George" },
+          { "seed": 9, "gamertag": "Sakura" },
+          { "seed": 12, "gamertag": "andres_atack" },
+          { "seed": 19, "gamertag": "fmatamalap" }
+        ]
+      },
+      {
+        "copa": "Copa C",
+        "fecha": "jue 9 jul",
+        "jugadores": [
+          { "seed": 3, "gamertag": "4yeji" },
+          { "seed": 8, "gamertag": "Vega" },
+          { "seed": 13, "gamertag": "betto" },
+          { "seed": 18, "gamertag": "alex_boom" }
+        ]
+      },
+      {
+        "copa": "Copa D",
+        "fecha": "jue 9 jul",
+        "jugadores": [
+          { "seed": 4, "gamertag": "Monoql21" },
+          { "seed": 7, "gamertag": "Miicha" },
+          { "seed": 14, "gamertag": "maxi" },
+          { "seed": 17, "gamertag": "feña_estrella" }
+        ]
+      },
+      {
+        "copa": "Copa E",
+        "fecha": "jue 16 jul",
+        "jugadores": [
+          { "seed": 5, "gamertag": "Goose" },
+          { "seed": 6, "gamertag": "el_jose" },
+          { "seed": 15, "gamertag": "Gz[1]uNiT" },
+          { "seed": 16, "gamertag": "Cathy" }
+        ]
+      }
+    ],
+    "peru": [
+      {
+        "copa": "Copa F",
+        "fecha": "jue 2 jul",
+        "jugadores": [
+          { "seed": 2, "gamertag": "Pai28" },
+          { "seed": 5, "gamertag": "Renarut" },
+          { "seed": 6, "gamertag": "Mele" },
+          { "seed": 9, "gamertag": "valita" }
+        ]
+      },
+      {
+        "copa": "Copa G",
+        "fecha": "jue 2 jul",
+        "jugadores": [
+          { "seed": 3, "gamertag": "YuGo" },
+          { "seed": 4, "gamertag": "xMathyu" },
+          { "seed": 7, "gamertag": "Cuis" },
+          { "seed": 8, "gamertag": "Lu" }
+        ]
+      }
+    ],
+    "byePeru": {
+      "seed": 1,
+      "gamertag": "Serch",
+      "avanza": "Final Principal",
+      "motivo": "Mejor tiempo de Perú en Fase 0. Con 9 clasificados (no múltiplo de 4) pasa directo sin jugar R1."
+    }
+  },
   "rondas": []
 };
 
@@ -419,6 +520,24 @@ const DATA = {
 //
 // 2) Para marcar en qué semana del calendario vamos, cambia "estado"
 //    de cada fila en "calendario" a "hecho", "actual" o "pendiente".
+//
+// 2.5) "proximaRonda" muestra los duelos programados (todavía sin jugar) en
+//      la sección "Primeros duelos", con cards + imagen de bracket. Cuando
+//      esa ronda ya se jugó: 1) mové cada copa con sus resultados reales a
+//      "rondas" (ver punto 3), 2) actualizá "proximaRonda" con los duelos de
+//      la ronda que sigue (o dejalo en null si todavía no se arma).
+//
+//      Reglas al armar "proximaRonda":
+//      - Solo se juega los jueves. Máximo 2 copas por jueves. Repartí las
+//        copas en tantos jueves como haga falta (campo "fecha" DENTRO de
+//        cada copa, no solo el de arriba de todo) y reflejá lo mismo en
+//        "calendario" más arriba.
+//      - "copaJuego" es el Grand Prix de Mario Kart World que se juega ESE
+//        conjunto de copas (mismo para todas, para que sea parejo). Cuando
+//        cambies de ronda podés elegir otro Grand Prix ahí.
+//      - Los nombres de los jugadores van SOLO en las cards (jugadores de
+//        cada copa). El bracket SVG de abajo no repite nombres a propósito
+//        (por espacio) — solo muestra letra de copa, fecha y mapa.
 //
 // 3) Para cargar los resultados de una ronda del bracket (Principal,
 //    Repechaje, Final Nacional, etc.), agrega un objeto a "rondas".
