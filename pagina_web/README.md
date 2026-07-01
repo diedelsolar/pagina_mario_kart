@@ -85,7 +85,7 @@ y abrís `http://localhost:8000` en el navegador.
 
 Se armó la tabla de "Fase 0" a partir de `Inscripcion_Mario_Kart_World_Cup.xlsx`, ordenando por tiempo (menor = mejor):
 
-- **Chile**: 25 inscritos → se eliminaron los 5 peores tiempos (MatiF, zapa, bastiking, fer, alondra) → quedan 20 clasificados.
-- **Perú**: 12 inscritos → se eliminaron los 2 peores tiempos (Chrispy, rex) + 1 sin tiempo registrado (KioShiMa) → quedan 9 clasificados.
+- **Chile**: 25 inscritos → se eliminaron los 5 peores tiempos (MatiF, zapa, bastiking, fer, alondra) → quedan 20 clasificados (5 copas de 4 en R1).
+- **Perú**: 12 inscritos → se eliminaron los 3 peores tiempos (rex, Chrispy, valita) + 1 sin tiempo registrado (KioShiMa) → quedan 8 clasificados (2 copas de 4 en R1, sin pase directo).
 
-Ojo: **"Hurtado De Mendoza Diaz, Valeria Fernanda" aparece dos veces en el Excel** con gamertags distintos (`valita` y `YuGo`), ambas con tiempo y ambas clasificadas. Si es la misma persona anotada dos veces por error, convendría decidir cuál de las dos entradas se queda antes de armar el bracket de Perú.
+Nota: **"Hurtado De Mendoza Diaz, Valeria Fernanda" aparece dos veces en el Excel** con gamertags distintos (`valita` y `YuGo`). Con el ajuste de arriba, `valita` quedó eliminada por tiempo y `YuGo` sigue clasificada, así que solo una de las dos entradas sigue en juego — ya no es un problema para el bracket.
