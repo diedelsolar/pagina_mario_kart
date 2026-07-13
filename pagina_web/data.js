@@ -5,11 +5,10 @@
 // ============================================================
 
 const DATA = {
-  "actualizado": "2026-07-08",
-  "faseActual": "Fase 1 en curso: Chile ya jugó Copa A y B, Perú arranca mañana.",
+  "actualizado": "2026-07-13",
+  "faseActual": "Fase 1 en curso: esta semana se corre el MARTES 14 de julio.",
   "avisosGenerales": [
-    "🇨🇱 Chile: mañana jueves 9 NO hay carreras — tenemos actividad en el club de campo. Se retoma el miércoles 15 de julio con la Copa C y D.",
-    "🇵🇪 Perú: las copas del jueves 2 no se jugaron — se juegan mañana jueves 9 (Copa F y G). La semana siguiente también se juega en miércoles en vez de jueves.",
+    "🇨🇱🇵🇪 Esta semana las carreras se retoman el MARTES 14 de julio (en vez del miércoles 15): Chile juega Copa C y D; Perú, Final Principal y Repechaje R1.",
     "The Boss no se presentó a la Copa A del jueves 2; fer entró como reemplazo."
   ],
   "resumen": {
@@ -51,14 +50,14 @@ const DATA = {
       "fecha": "jue 9 jul",
       "chile": "Sin carreras — actividad en el club de campo",
       "peru": "Principal R1 · Copa F y Copa G (reprogramado del jue 2)",
-      "estado": "actual"
+      "estado": "hecho"
     },
     {
       "sem": 5,
-      "fecha": "mié 15 jul",
+      "fecha": "mar 14 jul",
       "chile": "Principal R1 · Copa C y Copa D (movido del jue 9 por la actividad en el club de campo)",
-      "peru": "Final Principal + Repechaje R1 (según resultados de R1, movido a miércoles)",
-      "estado": "pendiente"
+      "peru": "Final Principal + Repechaje R1 (según resultados de R1, movido a martes)",
+      "estado": "actual"
     },
     {
       "sem": 6,
@@ -428,7 +427,7 @@ const DATA = {
   ],
   "proximaRonda": {
     "nombre": "Principal R1",
-    "fecha": "jue 9 · mié 15 · jue 23 jul",
+    "fecha": "mar 14 · jue 23 jul",
     "copaJuego": {
       "nombre": "Copa Caparazón (Shell Cup)",
       "pistas": ["Koopa Troopa Beach", "Faraway Oasis", "Crown City", "Peach Stadium"],
@@ -436,13 +435,13 @@ const DATA = {
     },
     "notas": [
       "Copa A y B de Chile ya se jugaron (ver resultados más abajo).",
-      "Chile: jue 9 sin carreras (actividad en el club de campo) · mié 15 (Copa C y D) · jue 23 (Copa E).",
-      "Perú: jue 9 (Copa F y G, reprogramado del jue 2)."
+      "Chile: mar 14 (Copa C y D) · jue 23 (Copa E).",
+      "Perú: mar 14 (Final Principal + Repechaje R1, según los resultados de Copa F y G del jue 9)."
     ],
     "chile": [
       {
         "copa": "Copa C",
-        "fecha": "mié 15 jul",
+        "fecha": "mar 14 jul",
         "jugadores": [
           { "seed": 3, "gamertag": "4yeji" },
           { "seed": 8, "gamertag": "Vega" },
@@ -452,7 +451,7 @@ const DATA = {
       },
       {
         "copa": "Copa D",
-        "fecha": "mié 15 jul",
+        "fecha": "mar 14 jul",
         "jugadores": [
           { "seed": 4, "gamertag": "Monoql21" },
           { "seed": 7, "gamertag": "Miicha" },
@@ -547,10 +546,10 @@ const DATA = {
     "peru": {
       "principal": [
         { "ronda": "Ronda 1", "copas": ["Copa F", "Copa G"] },
-        { "ronda": "Final Principal", "copas": [], "fecha": "mié 15 jul", "nota": "Los 4 que avanzan de Copa F y G" }
+        { "ronda": "Final Principal", "copas": [], "fecha": "mar 14 jul", "nota": "Los 4 que avanzan de Copa F y G" }
       ],
       "repechaje": [
-        { "ronda": "Repechaje R1", "copas": [], "fecha": "mié 15 jul", "esperando": ["Copa F", "Copa G"], "nota": "Se arma con los terceros de F y G" },
+        { "ronda": "Repechaje R1", "copas": [], "fecha": "mar 14 jul", "esperando": ["Copa F", "Copa G"], "nota": "Se arma con los terceros de F y G" },
         { "ronda": "Repechaje Final", "copas": [], "fecha": "jue 23 jul", "nota": "Por definir según resultados" }
       ],
       "final": { "nombre": "Final Nacional", "fecha": "jue 23 jul", "nota": "Lo mejor de la rama Principal vs el sobreviviente del Repechaje" }
