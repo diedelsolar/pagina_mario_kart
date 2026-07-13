@@ -6,9 +6,10 @@
 
 const DATA = {
   "actualizado": "2026-07-13",
-  "faseActual": "Fase 1 en curso: esta semana se corre el MARTES 14 de julio.",
+  "faseActual": "Fase 1 en curso: Chile corre el MARTES 14; Perú ya jugó la Copa F y retoma la próxima semana con la Copa G.",
   "avisosGenerales": [
-    "🇨🇱🇵🇪 Esta semana las carreras se retoman el MARTES 14 de julio (en vez del miércoles 15): Chile juega Copa C y D; Perú, Final Principal y Repechaje R1.",
+    "🇨🇱 Chile: las carreras se retoman el MARTES 14 de julio con la Copa C y Copa D.",
+    "🇵🇪 Perú: la Copa F ya se jugó (Renarut no se presentó). Esta semana Perú NO juega — retoma el jueves 23 con la Copa G que quedó pendiente.",
     "The Boss no se presentó a la Copa A del jueves 2; fer entró como reemplazo."
   ],
   "resumen": {
@@ -49,35 +50,35 @@ const DATA = {
       "sem": 4,
       "fecha": "jue 9 jul",
       "chile": "Sin carreras — actividad en el club de campo",
-      "peru": "Principal R1 · Copa F y Copa G (reprogramado del jue 2)",
+      "peru": "Principal R1 · Copa F jugada ✅ · Copa G no se jugó, queda pendiente",
       "estado": "hecho"
     },
     {
       "sem": 5,
       "fecha": "mar 14 jul",
       "chile": "Principal R1 · Copa C y Copa D (movido del jue 9 por la actividad en el club de campo)",
-      "peru": "Final Principal + Repechaje R1 (según resultados de R1, movido a martes)",
+      "peru": "Sin carreras esta semana",
       "estado": "actual"
     },
     {
       "sem": 6,
       "fecha": "jue 23 jul",
       "chile": "Principal R1 · Copa E (último grupo, movido del jue 16)",
-      "peru": "Repechaje Final + Final Nacional 🏆 (según resultados)",
+      "peru": "Principal R1 · Copa G (pendiente del jue 9)",
       "estado": "pendiente"
     },
     {
       "sem": 7,
       "fecha": "por confirmar",
       "chile": "Principal R2 + Repechaje (arranca con los resultados de R1)",
-      "peru": "— (campeón a la espera)",
+      "peru": "Final Principal + Repechaje R1 (según resultados)",
       "estado": "pendiente"
     },
     {
       "sem": 8,
       "fecha": "por confirmar",
       "chile": "Resto del bracket (Final Principal, Final Nacional 🏆)",
-      "peru": "—",
+      "peru": "Repechaje Final + Final Nacional 🏆",
       "estado": "pendiente"
     },
     {
@@ -434,9 +435,9 @@ const DATA = {
       "porque": "Dificultad intermedia: ni la primera copa (muy fácil) ni la Especial (la más difícil, reservada para la Final Nacional / Gran Final)."
     },
     "notas": [
-      "Copa A y B de Chile ya se jugaron (ver resultados más abajo).",
+      "Copa A y B de Chile y Copa F de Perú ya se jugaron (ver resultados más abajo).",
       "Chile: mar 14 (Copa C y D) · jue 23 (Copa E).",
-      "Perú: mar 14 (Final Principal + Repechaje R1, según los resultados de Copa F y G del jue 9)."
+      "Perú: no juega esta semana · jue 23 (Copa G, pendiente del jue 9)."
     ],
     "chile": [
       {
@@ -472,18 +473,8 @@ const DATA = {
     ],
     "peru": [
       {
-        "copa": "Copa F",
-        "fecha": "jue 9 jul",
-        "jugadores": [
-          { "seed": 1, "gamertag": "Serch" },
-          { "seed": 4, "gamertag": "xMathyu" },
-          { "seed": 5, "gamertag": "Renarut" },
-          { "seed": 8, "gamertag": "Lu" }
-        ]
-      },
-      {
         "copa": "Copa G",
-        "fecha": "jue 9 jul",
+        "fecha": "jue 23 jul",
         "jugadores": [
           { "seed": 2, "gamertag": "Pai28" },
           { "seed": 3, "gamertag": "YuGo" },
@@ -495,6 +486,23 @@ const DATA = {
     "byePeru": null
   },
   "rondas": [
+    {
+      "pais": "peru",
+      "nombre": "Principal R1",
+      "copas": [
+        {
+          "nombre": "Copa F",
+          "fecha": "jue 9 jul",
+          "nota": "Renarut no se presentó.",
+          "resultados": [
+            { "gamertag": "Serch", "posicion": 1, "puntos": 60, "avanza": "Final Principal" },
+            { "gamertag": "xMathyu", "posicion": 2, "puntos": 30, "avanza": "Final Principal" },
+            { "gamertag": "Lu", "posicion": 3, "puntos": 12, "avanza": "Repechaje R1" },
+            { "gamertag": "Renarut", "posicion": 4, "avanza": "Eliminado" }
+          ]
+        }
+      ]
+    },
     {
       "pais": "chile",
       "nombre": "Principal R1",
@@ -528,7 +536,9 @@ const DATA = {
       { "gamertag": "fer", "deCopa": "Copa A", "fecha": "jue 2 jul" },
       { "gamertag": "andres_atack", "deCopa": "Copa B", "fecha": "jue 2 jul" }
     ],
-    "peru": []
+    "peru": [
+      { "gamertag": "Lu", "deCopa": "Copa F", "fecha": "jue 9 jul" }
+    ]
   },
   "bracket": {
     "chile": {
@@ -546,13 +556,13 @@ const DATA = {
     "peru": {
       "principal": [
         { "ronda": "Ronda 1", "copas": ["Copa F", "Copa G"] },
-        { "ronda": "Final Principal", "copas": [], "fecha": "mar 14 jul", "nota": "Los 4 que avanzan de Copa F y G" }
+        { "ronda": "Final Principal", "copas": [], "nota": "Los 4 que avanzan de Copa F y G — se arma cuando se juegue la Copa G (jue 23)" }
       ],
       "repechaje": [
-        { "ronda": "Repechaje R1", "copas": [], "fecha": "mar 14 jul", "esperando": ["Copa F", "Copa G"], "nota": "Se arma con los terceros de F y G" },
-        { "ronda": "Repechaje Final", "copas": [], "fecha": "jue 23 jul", "nota": "Por definir según resultados" }
+        { "ronda": "Repechaje R1", "copas": [], "esperando": ["Copa F", "Copa G"], "nota": "Se arma con los terceros de F y G" },
+        { "ronda": "Repechaje Final", "copas": [], "nota": "Por definir según resultados" }
       ],
-      "final": { "nombre": "Final Nacional", "fecha": "jue 23 jul", "nota": "Lo mejor de la rama Principal vs el sobreviviente del Repechaje" }
+      "final": { "nombre": "Final Nacional", "nota": "Lo mejor de la rama Principal vs el sobreviviente del Repechaje" }
     }
   }
 };
