@@ -9,9 +9,14 @@
 body{margin:0;background:radial-gradient(1200px 600px at 50% -200px,#23232e 0%,var(--asphalt) 60%);color:var(--paper);font-family:'Inter',system-ui,sans-serif;padding:28px 18px 60px;line-height:1.5;}
 .wrap{max-width:1080px;margin:0 auto;}
 .flagstrip{height:14px;border-radius:4px;margin-bottom:18px;background:repeating-linear-gradient(45deg,#111 0 14px,#f4f2ec 14px 28px);box-shadow:0 2px 0 rgba(0,0,0,.4);}
-.videohero{margin:0 0 22px;border-radius:18px;overflow:hidden;border:1px solid #3a3a48;box-shadow:0 0 34px rgba(74,140,255,.25),0 10px 30px rgba(0,0,0,.5);line-height:0;}
-.videohero video{width:100%;max-height:520px;object-fit:cover;background:#000;}
-.videocaption{line-height:1.5;text-align:center;padding:10px 14px;background:linear-gradient(180deg,#2c2410,#1c1809);border-top:1px solid var(--gold);font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;color:#fff;}
+.herogrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin-bottom:22px;}
+@media(max-width:860px){.herogrid{grid-template-columns:1fr;}}
+.videohero{margin:0;border-radius:18px;overflow:hidden;border:1px solid #3a3a48;box-shadow:0 0 34px rgba(74,140,255,.25),0 10px 30px rgba(0,0,0,.5);line-height:0;display:flex;flex-direction:column;}
+.videohero video,.videohero img{width:100%;height:300px;object-fit:cover;background:#000;display:block;}
+@media(max-width:860px){.videohero video,.videohero img{height:auto;max-height:420px;}}
+.redeshero{box-shadow:0 0 34px rgba(228,0,43,.22),0 10px 30px rgba(0,0,0,.5);}
+.redeshero img{object-position:center 32%;}
+.videocaption{margin-top:auto;line-height:1.5;text-align:center;padding:10px 14px;background:linear-gradient(180deg,#2c2410,#1c1809);border-top:1px solid var(--gold);font-family:'Archivo',sans-serif;font-weight:700;font-size:13.5px;color:#fff;}
 .videocaption .vc-apodo{color:var(--gold);text-shadow:0 0 12px rgba(255,210,63,.5);}
 .videocaption .vc-sponsor{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:11.5px;color:var(--muted);margin-top:2px;}
 .videocaption .vc-sponsor b{color:#d9d2bd;}
