@@ -5,12 +5,13 @@
 // ============================================================
 
 const DATA = {
-  "actualizado": "2026-07-29",
-  "faseActual": "Ronda 1 completa en los dos países. El jueves 6 de agosto: Repechaje R1 en Chile y en Perú.",
+  "actualizado": "2026-08-05",
+  "faseActual": "Mañana jueves 6 Chile juega doble: Repechaje R1 y Copa Avance 2 (cierre de la Ronda 2). Perú descansa por feriado.",
   "avisosGenerales": [
-    "🏁 El REPECHAJE R1 se corre el JUEVES 6 DE AGOSTO en los dos países (esta semana no hay carreras) — la última oportunidad para seguir en carrera.",
-    "🇨🇱 Chile: Copa C, D y E jugadas + la primera copa de la Ronda 2 (Mauri y Jorge a la Final Principal). betto y fabi desertaron en la Copa C, así que su cupo de repechaje lo toma el_jose, que no pudo jugar por tema médico.",
-    "🇵🇪 Perú: Copa G jugada con 3 pilotos. Andrés Bravo (Pai28) y Frank (KioShiMa) no pudieron jugar por tema médico y entran igual al repechaje para no quedar fuera.",
+    "🇨🇱 MAÑANA JUEVES 6: Chile corre dos copas — el Repechaje R1 (última oportunidad) y la Copa Avance 2, que cierra la Ronda 2.",
+    "🇵🇪 Perú NO juega mañana: tienen feriado. Su Repechaje R1 ya se corrió el jue 30 de julio y lo ganó Andrés Bravo (Pai28), que pasa directo a la Final Nacional.",
+    "⚠️ Corrección Copa E: Goose y Gz[1]uNiT empataron con 30 pts y Goose avanzó por carrera de desempate. Gz[1]uNiT baja al repechaje y matias sweet queda eliminado.",
+    "⚠️ Ronda 2: Monoql21 queda fuera por vacaciones y Vega porque no se presentará. Con eso la Ronda 2 se cierra con una sola copa más.",
     "Reemplazos en Chile: fer por the boss (Copa A), fabi por alex_boom (Copa C) y matias sweet por el_jose (Copa E)."
   ],
   "resumen": {
@@ -72,28 +73,28 @@ const DATA = {
       "sem": 7,
       "fecha": "jue 30 jul",
       "chile": "Sin carreras — semana de descanso",
-      "peru": "Sin carreras — semana de descanso",
-      "estado": "actual"
+      "peru": "Repechaje R1 · Copa Repechaje P1 jugada ✅",
+      "estado": "hecho"
     },
     {
       "sem": 8,
       "fecha": "jue 6 ago",
-      "chile": "Repechaje R1 · Copa Repechaje 1",
-      "peru": "Repechaje R1 · Copa Repechaje P1",
-      "estado": "pendiente"
+      "chile": "Repechaje R1 · Copa Repechaje 1 + Ronda 2 · Copa Avance 2",
+      "peru": "Sin carreras — feriado en Perú",
+      "estado": "actual"
     },
     {
       "sem": 9,
       "fecha": "jue 13 ago",
-      "chile": "Ronda 2 · copas restantes + Repechaje 2",
-      "peru": "Final Principal + Repechaje Final",
+      "chile": "Repechaje 2 (con Gz[1]uNiT) + Final Principal",
+      "peru": "Final Principal",
       "estado": "pendiente"
     },
     {
       "sem": 10,
       "fecha": "jue 20 ago",
-      "chile": "Final Principal + Final Nacional 🏆",
-      "peru": "Final Nacional 🏆",
+      "chile": "Final Nacional 🏆",
+      "peru": "Final Nacional 🏆 (ganador Final Principal vs Pai28)",
       "estado": "pendiente"
     },
     {
@@ -442,7 +443,7 @@ const DATA = {
     }
   ],
   "proximaRonda": {
-    "nombre": "Repechaje R1",
+    "nombre": "Repechaje R1 + Ronda 2",
     "fecha": "jue 6 ago",
     "copaJuego": {
       "nombre": "Copa Caparazón (Shell Cup)",
@@ -450,9 +451,10 @@ const DATA = {
       "porque": "Mismo Grand Prix que la Ronda 1, para que la segunda oportunidad se corra en igualdad de condiciones."
     },
     "notas": [
-      "Se corre el jueves 6 de agosto. Última oportunidad: el que cae acá queda fuera del torneo.",
-      "Chile: el_jose entra en el cupo de la Copa C, porque betto y fabi desertaron. matias sweet (3º de la Copa E) queda para la siguiente copa de repechaje.",
-      "Perú: Pai28 (Andrés Bravo) y KioShiMa (Frank) no pudieron jugar su copa por tema médico y entran acá para no quedar fuera."
+      "Chile juega dos copas el jueves 6: el Repechaje R1 (última oportunidad, el que cae queda fuera) y la Copa Avance 2 de la Ronda 2.",
+      "En el repechaje, el_jose entra en el cupo de la Copa C porque betto y fabi desertaron. Gz[1]uNiT (3º de la Copa E) queda para la siguiente copa de repechaje.",
+      "La Copa Avance 2 cierra la Ronda 2: de los 6 que avanzaron quedaron 4, porque Monoql21 sale por vacaciones y Vega no se presentará.",
+      "Perú no juega esta semana por feriado. Su Repechaje R1 ya se jugó el jue 30 de julio."
     ],
     "chile": [
       {
@@ -464,20 +466,19 @@ const DATA = {
           { "seed": 12, "gamertag": "andres_atack" },
           { "seed": 24, "gamertag": "fer" }
         ]
-      }
-    ],
-    "peru": [
+      },
       {
-        "copa": "Copa Repechaje P1",
+        "copa": "Copa Avance 2",
         "fecha": "jue 6 ago",
         "jugadores": [
-          { "seed": 2, "gamertag": "Pai28" },
-          { "seed": 8, "gamertag": "Lu" },
-          { "seed": 10, "gamertag": "sebas" },
-          { "seed": 12, "gamertag": "KioShiMa" }
+          { "seed": 3, "gamertag": "4yeji" },
+          { "seed": 5, "gamertag": "Goose" },
+          { "seed": 14, "gamertag": "maxi" },
+          { "seed": 16, "gamertag": "Cathy" }
         ]
       }
     ],
+    "peru": [],
     "byePeru": null
   },
   "rondas": [
@@ -504,6 +505,23 @@ const DATA = {
             { "gamertag": "Mele", "posicion": 1, "puntos": 46, "avanza": "Final Principal" },
             { "gamertag": "Cuis", "posicion": 2, "puntos": 36, "avanza": "Final Principal" },
             { "gamertag": "sebas", "posicion": 3, "puntos": 17, "avanza": "Repechaje R1" }
+          ]
+        }
+      ]
+    },
+    {
+      "pais": "peru",
+      "nombre": "Repechaje R1",
+      "copas": [
+        {
+          "nombre": "Copa Repechaje P1",
+          "fecha": "jue 30 jul",
+          "nota": "Solo se presentaron Pai28 y KioShiMa. Lu y sebas no llegaron y quedan eliminados. Como sobrevive un solo piloto, Pai28 pasa directo a la Final Nacional (no se juega Repechaje Final).",
+          "resultados": [
+            { "gamertag": "Pai28", "posicion": 1, "puntos": 55, "avanza": "Final Nacional" },
+            { "gamertag": "KioShiMa", "posicion": 2, "puntos": 35, "avanza": "Eliminado" },
+            { "gamertag": "Lu", "posicion": 3, "avanza": "Eliminado" },
+            { "gamertag": "sebas", "posicion": 4, "avanza": "Eliminado" }
           ]
         }
       ]
@@ -557,12 +575,12 @@ const DATA = {
         {
           "nombre": "Copa E",
           "fecha": "jue 23 jul",
-          "nota": "matias sweet entró como reemplazo de el_jose, que no pudo jugar por tema médico (el_jose pasa al Repechaje R1).",
+          "nota": "Goose y Gz[1]uNiT empataron con 30 pts: Goose avanzó por carrera de desempate. matias sweet entró como reemplazo de el_jose, que no pudo jugar por tema médico (el_jose pasa al Repechaje R1).",
           "resultados": [
             { "gamertag": "Cathy", "posicion": 1, "puntos": 40, "avanza": "Ronda 2" },
-            { "gamertag": "Gz[1]uNiT", "posicion": 2, "puntos": 30, "avanza": "Ronda 2" },
-            { "gamertag": "matias sweet", "posicion": 3, "puntos": 25, "avanza": "Repechaje R1" },
-            { "gamertag": "Goose", "posicion": 4, "puntos": 20, "avanza": "Eliminado" }
+            { "gamertag": "Goose", "posicion": 2, "puntos": 30, "avanza": "Ronda 2" },
+            { "gamertag": "Gz[1]uNiT", "posicion": 3, "puntos": 30, "avanza": "Repechaje R1" },
+            { "gamertag": "matias sweet", "posicion": 4, "puntos": 20, "avanza": "Eliminado" }
           ]
         }
       ]
@@ -591,7 +609,7 @@ const DATA = {
       { "gamertag": "andres_atack", "deCopa": "Copa B", "fecha": "jue 2 jul" },
       { "gamertag": "el_jose", "deCopa": "Copa C", "fecha": "mar 14 jul" },
       { "gamertag": "Miicha", "deCopa": "Copa D", "fecha": "mar 14 jul" },
-      { "gamertag": "matias sweet", "deCopa": "Copa E", "fecha": "jue 23 jul" }
+      { "gamertag": "Gz[1]uNiT", "deCopa": "Copa E", "fecha": "jue 23 jul" }
     ],
     "peru": [
       { "gamertag": "Lu", "deCopa": "Copa F", "fecha": "jue 9 jul" },
@@ -604,11 +622,11 @@ const DATA = {
     "chile": {
       "principal": [
         { "ronda": "Ronda 1", "copas": ["Copa A", "Copa B", "Copa C", "Copa D", "Copa E"] },
-        { "ronda": "Ronda 2", "copas": ["Copa Avance 1"], "nota": "Faltan las copas con 4yeji, Vega, Monoql21, maxi, Cathy y Gz[1]uNiT" },
+        { "ronda": "Ronda 2", "copas": ["Copa Avance 1", "Copa Avance 2"], "nota": "Monoql21 (vacaciones) y Vega (no se presentará) quedan fuera, así que la Ronda 2 se cierra con esta copa" },
         { "ronda": "Final Principal", "copas": [], "nota": "Se arma con los que avanzan de la Ronda 2. Ya clasificados: Maurinho y George." }
       ],
       "repechaje": [
-        { "ronda": "Repechaje R1", "copas": ["Copa Repechaje 1"], "nota": "matias sweet queda para la siguiente copa de repechaje" },
+        { "ronda": "Repechaje R1", "copas": ["Copa Repechaje 1"], "nota": "Gz[1]uNiT queda para la siguiente copa de repechaje" },
         { "ronda": "Repechaje Final", "copas": [], "nota": "Por definir según resultados" }
       ],
       "final": { "nombre": "Final Nacional", "nota": "Lo mejor de la rama Principal vs el sobreviviente del Repechaje" }
@@ -619,10 +637,9 @@ const DATA = {
         { "ronda": "Final Principal", "copas": [], "nota": "Los 4 que avanzaron de la R1: Serch, xMathyu, Mele y Cuis. Fecha por confirmar." }
       ],
       "repechaje": [
-        { "ronda": "Repechaje R1", "copas": ["Copa Repechaje P1"], "nota": "Incluye a Pai28 y KioShiMa, que no pudieron jugar por tema médico" },
-        { "ronda": "Repechaje Final", "copas": [], "nota": "Por definir según resultados" }
+        { "ronda": "Repechaje R1", "copas": ["Copa Repechaje P1"], "nota": "Jugado el jue 30 jul — sobrevive Pai28" }
       ],
-      "final": { "nombre": "Final Nacional", "nota": "Lo mejor de la rama Principal vs el sobreviviente del Repechaje" }
+      "final": { "nombre": "Final Nacional", "nota": "Ganador de la Final Principal vs Pai28, único sobreviviente del Repechaje" }
     }
   }
 };
