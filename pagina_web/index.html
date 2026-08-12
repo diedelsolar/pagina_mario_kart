@@ -44,7 +44,7 @@
     <img src="logo.png" alt="Mario Kart World Cup" class="logo" onerror="this.style.display='none'">
     <div class="eyebrow">Coe · Chile 🇨🇱 vs Perú 🇵🇪 · Switch 2</div>
     <h1>Mario Kart <span class="em">World Cup</span></h1>
-    <p class="sub">Doble eliminación por país: rama <b style="color:var(--principal)">Principal</b> para quien no pierde y rama <b style="color:var(--repechaje)">Repechaje</b> como segunda oportunidad. Cada duelo es una copa de 4 carreras: el top 2 avanza, y en la Ronda 1 el 3º baja al repechaje mientras el 4º queda eliminado. De la Ronda 2 en adelante ya no hay segunda oportunidad.</p>
+    <p class="sub">Doble eliminación por país: rama <b style="color:var(--principal)">Principal</b> para quien no pierde y rama <b style="color:var(--repechaje)">Repechaje</b> como segunda oportunidad. Cada duelo es una copa de 4 carreras y el top 2 avanza. En la Ronda 1 solo el 3º baja al repechaje; en la Ronda 2 bajan los dos perdedores. Dentro del repechaje, el que pierde queda fuera del torneo.</p>
   </header>
 
   <div class="avisos" id="avisos"></div>
@@ -326,7 +326,7 @@ function fbCopaBox(pais, nombre){
       <div class="fb-copa-head"><span>${esc(nombre)}</span><span class="fb-fecha">📅 ${esc(prog.fecha)}</span></div>
       ${prog.jugadores.map(j => `
         <div class="fb-slot s-pend" title="${esc(nombreDe(pais, j.gamertag))}">
-          <span class="fb-pos">#${j.seed}</span><span class="fb-tag">${esc(j.gamertag)}</span><span class="fb-badge pend">por jugar</span>
+          <span class="fb-pos">${j.seed ? '#'+j.seed : '·'}</span><span class="fb-tag">${esc(j.gamertag)}</span><span class="fb-badge pend">por jugar</span>
         </div>`).join('')}
     </div>`;
   }
