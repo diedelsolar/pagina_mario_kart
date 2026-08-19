@@ -376,12 +376,20 @@ function renderFullBracket(pais, containerId){
   const arrow = `<div class="fb-arrow">➤</div>`;
 
   const principal = bk.principal.map(r => fbRondaCol(pais, r, false)).join(arrow);
+  const fin = bk.final;
+  const slotsFinal = (fin.jugadores && fin.jugadores.length)
+    ? fin.jugadores.map(j => `
+        <div class="fb-slot ${j.via === 'repechaje' ? 's-rep' : 's-ok'}" title="${esc(nombreDe(pais, j.gamertag))}">
+          <span class="fb-tag">${esc(j.gamertag)}</span>
+          <span class="fb-badge ${j.via === 'repechaje' ? 'rep' : 'ok'}">${esc(j.desde || 'clasificado')}</span>
+        </div>`).join('')
+    : `<div class="fb-slot s-ok"><span class="fb-tag">Ganador rama Principal</span></div>
+       <div class="fb-slot s-rep"><span class="fb-tag">Sobreviviente del Repechaje</span></div>`;
   const finalBox = `<div class="fb-col">
     <div class="fb-copa fb-final">
-      <div class="fb-copa-head"><span>🏆 ${esc(bk.final.nombre)}</span>${bk.final.fecha ? `<span class="fb-fecha">📅 ${esc(bk.final.fecha)}</span>` : ''}</div>
-      <div class="fb-slot s-ok"><span class="fb-tag">Ganador rama Principal</span></div>
-      <div class="fb-slot s-rep"><span class="fb-tag">Sobreviviente del Repechaje</span></div>
-      <div class="fb-tbd">${esc(bk.final.nota || '')}</div>
+      <div class="fb-copa-head"><span>🏆 ${esc(fin.nombre)}</span>${fin.fecha ? `<span class="fb-fecha">📅 ${esc(fin.fecha)}</span>` : ''}</div>
+      ${slotsFinal}
+      <div class="fb-tbd">${esc(fin.nota || '')}</div>
     </div>
   </div>`;
 

@@ -5,15 +5,12 @@
 // ============================================================
 
 const DATA = {
-  "actualizado": "2026-08-12",
-  "faseActual": "Mañana jueves 13, jornada grande: Finales Principales en los dos países + Repechaje R2 en Chile y Repechaje R1 en Perú.",
+  "actualizado": "2026-08-19",
+  "faseActual": "Perú ya tiene a sus 3 finalistas. Mañana jueves 20 Chile corre su Final Principal y el Repechaje R2.",
   "avisosGenerales": [
-    "🏆 MAÑANA JUEVES 13: se corren las FINALES PRINCIPALES de Chile y de Perú. Los que ganen ahí llegan a la Final Nacional.",
-    "🇨🇱 Chile juega además las dos copas del Repechaje R2 (2A y 2B), así que mañana son tres copas.",
-    "🇵🇪 Perú juega doble: Final Principal (Serch, xMathyu, Mele y Cuis) y Repechaje R1 (Pai28, Lu y sebas).",
-    "🔁 Cambio de reglas en la Ronda 2 de Chile: ahora los DOS perdedores de cada copa bajan al Repechaje R2 (antes quedaban eliminados). Vuelven a la carrera diegonitro, Sakura, 4yeji y matias sweet.",
-    "⚠️ Corrección Copa E: el orden final fue Cathy 1ª, matias sweet 2º, Goose 3º y Gz[1]uNiT 4º. Por eso matias sweet corrió la Copa Avance 2, Goose entra al Repechaje R2 y Gz[1]uNiT queda eliminado.",
-    "🇵🇪 La copa del jue 30 de julio fue una Copa Repechaje Enfermos entre Pai28 y KioShiMa (los que no pudieron correr por tema médico). La ganó Pai28 y por eso entra al Repechaje R1."
+    "🇨🇱 MAÑANA JUEVES 20: Chile juega las tres copas que quedaron pendientes de la semana pasada — Final Principal, Repechaje 2A y Repechaje 2B.",
+    "🇵🇪 Perú ya cerró su fase: la FINAL NACIONAL la corren Cuis y Mele (1º y 2º de la Final Principal) más Pai28, ganador del Repechaje. Serch no se presentó a la Final Principal.",
+    "🔁 Recordatorio de reglas: en la Ronda 2 de Chile bajan los DOS perdedores de cada copa al Repechaje R2. Dentro del repechaje, el que pierde queda fuera del torneo."
   ],
   "resumen": {
     "chile": {
@@ -87,20 +84,27 @@ const DATA = {
     {
       "sem": 9,
       "fecha": "jue 13 ago",
-      "chile": "Final Principal 🏁 + Repechaje R2 · Copa 2A y Copa 2B",
-      "peru": "Final Principal 🏁 + Repechaje R1 · Copa Repechaje P1",
-      "estado": "actual"
+      "chile": "Sin carreras — se posterga al jue 20",
+      "peru": "Final Principal 🏁 + Repechaje R1 · Copa Repechaje P1 jugadas ✅",
+      "estado": "hecho"
     },
     {
       "sem": 10,
       "fecha": "jue 20 ago",
-      "chile": "Repechaje Final + Final Nacional 🏆",
-      "peru": "Final Nacional 🏆",
-      "estado": "pendiente"
+      "chile": "Final Principal 🏁 + Repechaje R2 · Copa 2A y Copa 2B",
+      "peru": "Final Nacional 🏆 (Cuis · Mele · Pai28)",
+      "estado": "actual"
     },
     {
       "sem": 11,
       "fecha": "jue 27 ago",
+      "chile": "Repechaje Final + Final Nacional 🏆",
+      "peru": "— (campeón a la espera)",
+      "estado": "pendiente"
+    },
+    {
+      "sem": 12,
+      "fecha": "por confirmar",
       "chile": "🌎 Gran Final Internacional",
       "peru": "🌎 Gran Final Internacional",
       "estado": "pendiente"
@@ -444,22 +448,22 @@ const DATA = {
     }
   ],
   "proximaRonda": {
-    "nombre": "Finales Principales + Repechajes",
-    "fecha": "jue 13 ago",
+    "nombre": "Final Principal + Repechaje R2 · Chile",
+    "fecha": "jue 20 ago",
     "copaJuego": {
       "nombre": "Copa Caparazón (Shell Cup)",
       "pistas": ["Koopa Troopa Beach", "Faraway Oasis", "Crown City", "Peach Stadium"],
       "porque": "Mismo Grand Prix que la Ronda 1, para que la segunda oportunidad se corra en igualdad de condiciones."
     },
     "notas": [
-      "🇨🇱 Chile juega triple: la FINAL PRINCIPAL con los 4 que avanzaron de la Ronda 2, más las dos copas del Repechaje R2.",
-      "🇵🇪 Perú juega doble: su Final Principal (los 4 que avanzaron de R1) y el Repechaje R1 con Pai28, Lu y sebas.",
-      "El Repechaje R2 son 2 copas de 3: bajan los 4 perdedores de la Ronda 2, más el_jose (ganador del Repechaje R1) y Goose, que todavía no había corrido su repechaje."
+      "🇨🇱 Chile juega triple: la FINAL PRINCIPAL con los 4 que avanzaron de la Ronda 2, más las dos copas del Repechaje R2. Son las carreras que quedaron pendientes del jue 13.",
+      "El Repechaje R2 son 2 copas de 3: bajan los 4 perdedores de la Ronda 2, más el_jose (ganador del Repechaje R1) y Goose, que todavía no había corrido su repechaje.",
+      "🇵🇪 Perú ya terminó esta fase: mañana corre directo su FINAL NACIONAL con Cuis, Mele y Pai28."
     ],
     "chile": [
       {
         "copa": "Final Principal",
-        "fecha": "jue 13 ago",
+        "fecha": "jue 20 ago",
         "jugadores": [
           { "seed": 1, "gamertag": "Maurinho" },
           { "seed": 2, "gamertag": "George" },
@@ -469,7 +473,7 @@ const DATA = {
       },
       {
         "copa": "Copa Repechaje 2A",
-        "fecha": "jue 13 ago",
+        "fecha": "jue 20 ago",
         "jugadores": [
           { "seed": 3, "gamertag": "4yeji" },
           { "seed": 6, "gamertag": "el_jose" },
@@ -478,7 +482,7 @@ const DATA = {
       },
       {
         "copa": "Copa Repechaje 2B",
-        "fecha": "jue 13 ago",
+        "fecha": "jue 20 ago",
         "jugadores": [
           { "seed": 5, "gamertag": "Goose" },
           { "seed": 9, "gamertag": "Sakura" },
@@ -486,27 +490,7 @@ const DATA = {
         ]
       }
     ],
-    "peru": [
-      {
-        "copa": "Final Principal",
-        "fecha": "jue 13 ago",
-        "jugadores": [
-          { "seed": 1, "gamertag": "Serch" },
-          { "seed": 4, "gamertag": "xMathyu" },
-          { "seed": 6, "gamertag": "Mele" },
-          { "seed": 7, "gamertag": "Cuis" }
-        ]
-      },
-      {
-        "copa": "Copa Repechaje P1",
-        "fecha": "jue 13 ago",
-        "jugadores": [
-          { "seed": 2, "gamertag": "Pai28" },
-          { "seed": 8, "gamertag": "Lu" },
-          { "seed": 10, "gamertag": "sebas" }
-        ]
-      }
-    ],
+    "peru": [],
     "byePeru": null
   },
   "rondas": [
@@ -533,6 +517,39 @@ const DATA = {
             { "gamertag": "Mele", "posicion": 1, "puntos": 46, "avanza": "Final Principal" },
             { "gamertag": "Cuis", "posicion": 2, "puntos": 36, "avanza": "Final Principal" },
             { "gamertag": "sebas", "posicion": 3, "puntos": 17, "avanza": "Repechaje R1" }
+          ]
+        }
+      ]
+    },
+    {
+      "pais": "peru",
+      "nombre": "Final Principal",
+      "copas": [
+        {
+          "nombre": "Final Principal",
+          "fecha": "jue 13 ago",
+          "nota": "Serch no se presentó. Los dos primeros pasan a la Final Nacional.",
+          "resultados": [
+            { "gamertag": "Cuis", "posicion": 1, "puntos": 46, "avanza": "Final Nacional" },
+            { "gamertag": "Mele", "posicion": 2, "puntos": 43, "avanza": "Final Nacional" },
+            { "gamertag": "xMathyu", "posicion": 3, "puntos": 36, "avanza": "Eliminado" },
+            { "gamertag": "Serch", "posicion": 4, "avanza": "Eliminado" }
+          ]
+        }
+      ]
+    },
+    {
+      "pais": "peru",
+      "nombre": "Repechaje R1",
+      "copas": [
+        {
+          "nombre": "Copa Repechaje P1",
+          "fecha": "jue 13 ago",
+          "nota": "Solo el ganador sigue en carrera y se mete en la Final Nacional.",
+          "resultados": [
+            { "gamertag": "Pai28", "posicion": 1, "puntos": 60, "avanza": "Final Nacional" },
+            { "gamertag": "sebas", "posicion": 2, "puntos": 39, "avanza": "Eliminado" },
+            { "gamertag": "Lu", "posicion": 3, "puntos": 31, "avanza": "Eliminado" }
           ]
         }
       ]
@@ -699,7 +716,16 @@ const DATA = {
         { "ronda": "Repechaje Enfermos", "copas": ["Copa Repechaje Enfermos"], "nota": "Copa especial de los que no pudieron correr su copa de R1 por tema médico" },
         { "ronda": "Repechaje R1", "copas": ["Copa Repechaje P1"], "nota": "El ganador se mete en la Final Nacional" }
       ],
-      "final": { "nombre": "Final Nacional", "nota": "Ganador de la Final Principal vs el sobreviviente del Repechaje" }
+      "final": {
+        "nombre": "Final Nacional",
+        "fecha": "jue 20 ago",
+        "nota": "Se corre a 3 pilotos: los dos mejores de la Final Principal más el ganador del Repechaje.",
+        "jugadores": [
+          { "gamertag": "Cuis", "desde": "1º Final Principal" },
+          { "gamertag": "Mele", "desde": "2º Final Principal" },
+          { "gamertag": "Pai28", "desde": "ganador Repechaje", "via": "repechaje" }
+        ]
+      }
     }
   }
 };
